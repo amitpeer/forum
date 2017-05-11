@@ -1,4 +1,5 @@
 public class ActionLogger {
+
     private Forum forum;
 
     public ActionLogger() { }
