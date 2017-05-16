@@ -99,6 +99,8 @@ public class ForumMember {
     private boolean checkAndAddName(String name) {
         return NAMES.add(name);
     }
+
+    public void sendPrivateMessage(PrivateMessage privateMessage){}
 }
 
 enum Status {

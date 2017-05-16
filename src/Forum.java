@@ -11,6 +11,8 @@ public class Forum {
     private ForumPolicy forumPolicy;
     private int forumId;
 
+    private String systemMessage="";
+
     public Forum(ActionLogger actionLogger, ErrorLogger errorLogger, Admin admin, ForumPolicy forumPolicy, int
             forumId) {
         this.actionLogger = actionLogger;
@@ -85,4 +87,22 @@ public class Forum {
     }
 
     public void addSubForumToForum(SubForum subForum){}
+
+    public void createReport(String reportID,Admin admin) {Report report= new Report(reportID);
+    admin.addReportToAdmitList(report);}
+
+    private void sendTo(boolean sendToMail, boolean showOnScreen) {}
+
+    public void cancelGuide(Guide guide,Admin admin){}
+
+    public void cancelGuideMessage(Admin admin , ForumMember forumMember, PrivateMessage message) {}
+
+    public void removeUserFromList(ForumMember forumMember) {this.forumMembers.remove(forumMember); }
+
+    public void addUserToUsersList(ForumMember forumMembe) { this.forumMembers.add(forumMembe);}
+
+    public String chainCancelMessage(String message) {return systemMessage+message; }
+
+
+
 }

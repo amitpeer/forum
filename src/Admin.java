@@ -1,8 +1,11 @@
+import java.util.List;
+
 public class Admin extends ForumMember {
 
     private Forum manages;
     private Forum complaintSource;
     private Complaint complaint;
+    private List<Report> reportList;
 
     public Admin(String name) throws Exception {
         super(name);
@@ -35,4 +38,14 @@ public class Admin extends ForumMember {
     public  void promoteMemberToGuide(int memberId, int subForumId) {}
 
     public void createSubForum(int forumId, String subForumSubject, String adminName){}
+
+    public void addReportToAdmitList(Report report) { this.reportList.add(report); }
+
+    public void sendToMail(Report report){}
+
+    public void showOnScreen(Report report) {}
+
+    public void showMessage(String message) {}
+
+
 }

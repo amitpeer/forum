@@ -34,4 +34,6 @@ public class Guide extends ForumMember {
 
     public void createGuideToSubForum(SubForum subForum, String adminName){}
 
+    public  void getGuideSubForums(){}
+
 }

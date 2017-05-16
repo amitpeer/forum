@@ -53,4 +53,6 @@ public class SubForum {
     }
 
     public void createSubForum(int forumId, String subForumSubject, String adminName){}
+
+    public void deleteGuideFromGuideList(Guide guide){}
 }
