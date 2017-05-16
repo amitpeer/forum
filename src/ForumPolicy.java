@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class ForumPolicy {
 
     private Forum forum;
@@ -75,4 +77,6 @@ public class ForumPolicy {
     public void setSecurityPolicy(SecurityPolicy securityPolicy) {
         this.securityPolicy = securityPolicy;
     }
+
+    public List<ForumMember> getPromotableMembers(int forumId) {return null;}
 }

@@ -9,6 +9,7 @@ public class Message {
     private String content;
     private String title;
     private String subTopic;
+    private int messageId;
 
     public Message(Discussion discussionStarter) {
         this.discussionStarter = discussionStarter;
@@ -65,4 +66,6 @@ public class Message {
     public Message getRepliesTo() {
         return repliesTo;
     }
+
+    public void addReplyMessage(Message message, Message reply) {}
 }

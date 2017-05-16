@@ -96,11 +96,19 @@ public class ForumMember {
         this.complaints = complaints;
     }
 
+    public void sendPrivateMessage(PrivateMessage privateMessage) {
+    }
+
+    public Boolean memberNameContainsString(String name) {
+        return null;
+    }
+
+    public void addFriendRequestToUser(ForumMember forumMember) {
+    }
+
     private boolean checkAndAddName(String name) {
         return NAMES.add(name);
     }
-
-    public void sendPrivateMessage(PrivateMessage privateMessage){}
 }
 
 enum Status {

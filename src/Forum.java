@@ -11,7 +11,7 @@ public class Forum {
     private ForumPolicy forumPolicy;
     private int forumId;
 
-    private String systemMessage="";
+    private String systemMessage = "";
 
     public Forum(ActionLogger actionLogger, ErrorLogger errorLogger, Admin admin, ForumPolicy forumPolicy, int
             forumId) {
@@ -86,23 +86,80 @@ public class Forum {
         this.subForums = subForums;
     }
 
-    public void addSubForumToForum(SubForum subForum){}
+    public void addSubForumToForum(SubForum subForum) {
+    }
 
-    public void createReport(String reportID,Admin admin) {Report report= new Report(reportID);
-    admin.addReportToAdmitList(report);}
+    public void createReport(String reportID, Admin admin) {
+        Report report = new Report(reportID);
+        admin.addReportToAdmitList(report);
+    }
 
-    private void sendTo(boolean sendToMail, boolean showOnScreen) {}
+    public void cancelGuide(Guide guide, Admin admin) {
+    }
 
-    public void cancelGuide(Guide guide,Admin admin){}
+    public void cancelGuideMessage(Admin admin, ForumMember forumMember, PrivateMessage message) {
+    }
 
-    public void cancelGuideMessage(Admin admin , ForumMember forumMember, PrivateMessage message) {}
+    public void removeUserFromList(ForumMember forumMember) {
+        this.forumMembers.remove(forumMember);
+    }
 
-    public void removeUserFromList(ForumMember forumMember) {this.forumMembers.remove(forumMember); }
+    public void addUserToUsersList(ForumMember forumMembe) {
+        this.forumMembers.add(forumMembe);
+    }
 
-    public void addUserToUsersList(ForumMember forumMembe) { this.forumMembers.add(forumMembe);}
+    public String chainCancelMessage(String message) {
+        return systemMessage + message;
+    }
 
-    public String chainCancelMessage(String message) {return systemMessage+message; }
+    public void approveComplaint(String subjectUserName, String content) {
+    }
 
+    public void addComplaintToList(Complaint complaint) {
+    }
 
+    public void addComplaintToUser(Complaint complaint) {
+    }
 
+    public List<SubForum> showSubForumList() {
+        return null;
+    }
+
+    public void connectMessageToDiscussion(Message message) {
+    }
+
+    public void addDiscussion(Discussion discussion) {
+    }
+
+    public void addMessageToForum(Message message) {
+    }
+
+    public void addMessageToUser(Message message) {
+    }
+
+    public Message findMessage(int messageId) {
+        return null;
+    }
+
+    public List<ForumMember> getPromotableMembers(int forumId) {
+        return null;
+    }
+
+    public Boolean doesForumExists(int forumId) {
+        return null;
+    }
+
+    public List<String> getTopics(int forumId) {
+        return null;
+    }
+
+    public List<String> getAllSuggestedTopics() {
+        return null;
+    }
+
+    public void removeTopic(String topic) {
+    }
+
+    private void sendTo(boolean sendToMail, boolean showOnScreen) {
+    }
 }

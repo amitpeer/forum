@@ -47,5 +47,6 @@ public class Admin extends ForumMember {
 
     public void showMessage(String message) {}
 
+    public Boolean isSubjectTaken(int forumId, String subForumSubject) {return null;}
 
 }
